@@ -3,7 +3,7 @@ LABEL maintainer="samsongama@gmail.com"
 COPY ta-lib-0.4.0-src.tar.gz /tmp/ta-lib-0.4.0-src.tar.gz
 RUN mkdir build && cd build && apt-get update && \
     apt-get install -y wget git && \
-    pip install cython numpy keras scipy requests redis && \
+    pip install cython numpy keras scipy requests redis pandas && \
     pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.whl && \
     cd /tmp && \
     tar -xvzf ta-lib-0.4.0-src.tar.gz && \
